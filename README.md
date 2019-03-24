@@ -88,7 +88,7 @@ Pilot provides services discovery for the Envoy sidecars, traffic management cap
     
     2.  Add corresponding path to $PATH
     
-    3.  kubectl apply -f install/kubernetes/helm/istio/templates/crds.yaml
+    3.  for i in install/kubernetes/helm/istio-init/files/crd*yaml; do kubectl apply -f $i; done
 
     4.  kubectl create -f install/kubernetes/istio-demo.yaml
                             OR
